@@ -9,7 +9,6 @@ from pageObjects.SearchCustomerPage import SearchCustomer
 from utilities.readProperties import ReadConfig
 import pytest
 
-
 class Test_seachCustomer:
     baseURL = ReadConfig.getApplicationURL()
     username = ReadConfig.getUserEmail()
@@ -36,9 +35,9 @@ class Test_seachCustomer:
         self.searchcust = SearchCustomer(self.driver)
         self.searchcust.link_customer_module()
         self.searchcust.link_sub_customer_module()
-
+        time.sleep(5)
         self.testlog.info("**** Providing customer information to search ****")
-
+        self.driver.implicitly_wait(5)
         # self.searchcust.search_by_email("admin@yourStore.com")
         self.searchcust.search_by_firstname("John")
         self.searchcust.search_by_lastname("Smith")
@@ -53,7 +52,7 @@ class Test_seachCustomer:
             self.driver.save_screenshot(".\\Screenshots\\" + "test_searched_name_scr.png")
             self.testlog.error("*** Search customer Failed ***")
             assert True == False
-            time.sleep(10)
+            time.sleep(5)
             self.testlog.info("*** Ending of Searched Page Test ***")
             self.driver.close()
 
@@ -77,9 +76,10 @@ class Test_seachCustomer:
         self.searchcust = SearchCustomer(self.driver)
         self.searchcust.link_customer_module()
         self.searchcust.link_sub_customer_module()
-
+        time.sleep(5)
         self.testlog.info("**** Providing customer information to search ****")
 
+        self.driver.implicitly_wait(5)
         self.searchcust.search_by_email("admin@yourStore.com")
         # self.searchcust.search_by_firstname("John")
         # self.searchcust.search_by_lastname("Smith")

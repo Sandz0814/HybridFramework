@@ -6,9 +6,9 @@ class SearchCustomer:
     link_customer_module_xpath = "//body[1]/div[3]/aside[1]/div[1]/div[4]/div[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]/p[1]"
     link_sub_customer_module_xpath = "//body[1]/div[3]/aside[1]/div[1]/div[4]/div[1]/div[1]/nav[1]/ul[1]/li[4]/ul[1]/li[1]/a[1]/p[1]"
     btn_add_new_customer_xpath = "//body/div[3]/div[1]/form[1]/div[1]/div[1]/a[1]"
-    search_by_email_xpath = "//input[@id='SearchEmail']"
-    search_by_firstname_xpath = "//input[@id='SearchFirstName']"
-    search_by_lastname_xpath = "//input[@id='SearchLastName']"
+    search_by_email_name = "SearchEmail"
+    search_by_firstname_name = "SearchFirstName"
+    search_by_lastname_name = "SearchLastName"
     search_by_dob_xpath = "//select[@id='SearchMonthOfBirth']"
     search_by_dob_month_xpath = '//*[@id="SearchMonthOfBirth"]/option[9]'
     search_by_dob_day_xpath = "//select[@id='SearchDayOfBirth']"
@@ -35,13 +35,13 @@ class SearchCustomer:
         self.driver.find_element(By.XPATH, self.btn_add_new_customer_xpath).click()
 
     def search_by_email(self, email):
-        self.driver.find_element(By.XPATH, self.search_by_email_xpath).send_keys(email)
+        self.driver.find_element(By.NAME, self.search_by_email_name).send_keys(email)
 
     def search_by_firstname(self, firstname):
-        self.driver.find_element(By.XPATH, self.search_by_firstname_xpath).send_keys(firstname)
+        self.driver.find_element(By.NAME, self.search_by_firstname_name).send_keys(firstname)
 
     def search_by_lastname(self, lastname):
-        self.driver.find_element(By.XPATH, self.search_by_lastname_xpath).send_keys(lastname)
+        self.driver.find_element(By.NAME, self.search_by_lastname_name).send_keys(lastname)
 
     def search_by_dob(self, dob):
         self.driver.find_element(By.XPATH, self.search_by_dob_xpath).click()
