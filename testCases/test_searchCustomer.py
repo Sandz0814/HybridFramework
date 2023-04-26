@@ -16,7 +16,7 @@ class Test_seachCustomer:
     password = ReadConfig.getPassword()
     testlog = LogGen.loggen()
 
-    @pytest.mark.sandro
+    @pytest.mark.regression
     def test_search_customer_by_name(self, setup):
 
         self.testlog.info("**** Verifying login test ****")
@@ -57,7 +57,7 @@ class Test_seachCustomer:
             self.testlog.info("*** Ending of Searched Page Test ***")
             self.driver.close()
 
-    @pytest.mark.jimena
+    @pytest.mark.sanity
     def test_search_customer_by_email(self, setup):
 
         self.testlog.info("**** Verifying login test ****")
