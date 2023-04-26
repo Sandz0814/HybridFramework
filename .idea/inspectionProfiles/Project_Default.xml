@@ -1,0 +1,18 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="lib2to3.pgen2.driver.find_element" />
+          <option value="main.primary" />
+          <option value="str.send_keys" />
+          <option value="Phptravels.dropdown_element" />
+          <option value="TestProject.GoogleSearchTest.GoogleSearch.driver" />
+          <option value="allure" />
+          <option value="OrangeHRM_Test.Test_OrangeHRM.allure_commons" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

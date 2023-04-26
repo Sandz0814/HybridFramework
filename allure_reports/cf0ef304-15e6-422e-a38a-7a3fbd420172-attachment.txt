@@ -1,0 +1,7 @@
+[32mINFO    [0m root:test_addCustomer.py:24 **** Verifying login test ****
+[32mINFO    [0m root:test_addCustomer.py:34 **** Login successfully ****
+[32mINFO    [0m root:test_addCustomer.py:36 **** Staring Add customer test ****
+[32mINFO    [0m root:test_addCustomer.py:43 **** Providing customer information ****
+[32mINFO    [0m root:test_addCustomer.py:81 *** saving customer details***
+[31m[1mERROR   [0m root:test_addCustomer.py:91 *** Add customer Failed ***
+[32mINFO    [0m root:test_addCustomer.py:95 *** Ending Customer Page Test ***

@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_searchCustomer.py:20 **** Verifying login test ****
+[32mINFO    [0m root:test_searchCustomer.py:30 **** Login successfully ****
+[32mINFO    [0m root:test_searchCustomer.py:32 **** Staring Search customer test ****
+[32mINFO    [0m root:test_searchCustomer.py:38 **** Providing customer information to search ****

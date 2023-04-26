@@ -1,0 +1,39 @@
+selenium driver : libraries
+pytest : pytest unittest framework
+pytest-html : HTML report
+pytest-xdist : run test parallel
+Openpyxl : MS excel support
+Allure-pytest : to generate report
+
+**Folder Structure**
+- page Object(package)
+- test case (package)
+- utilities (package)
+- Test data (folder)
+- configuration ( folder )
+- logs (folder)
+- screenshot (folder)
+- reports (folder)
+- run.bat
+
+==========================================================
+pytest -v -s testCases/test_login.py ------------------ to run the test case
+pytest -s -v testCases/test_login.py --browser chrome ----------------- to run to desire browser
+pytest -s -v testCases/test_login.py --browser firefox ----------------- to run to desire browser
+pytest -s -v -n2 testCases/test_login.py --browser chrome ----------------- to run to desire browser
+pytest -s -v -n2 testCases/test_login.py --browser firefox ----------------- to run to desire browser
+
+# To generate HTML report
+pytest -s -v -n2 --html=Reports\report.html testCases/test_login.py -- browser chrome
+pytest -s -v  --html=Reports\report.html testCases/test_login.py
+
+# To Generate allure report
+pytest -v -s --alluredir="C:\Users\Sandz\PycharmProjects\HybridFramework\allure_reports" testCases\test_login_ddt.py
+allure serve C:\Users\Sandz\PycharmProjects\HybridFramework\test_Cases\allure_reports
+
+# MARKERS
+pytest -s -v -m "sanity" --html=./Reports/report.html testCases/ -- browser chrome
+pytess -s -v -m "sanity and regression" --html=./Reports/report.html testCases/ -- browser chrome
+
+
+
