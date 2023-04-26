@@ -35,7 +35,6 @@ class TestLogin:
             assert False
 
     @pytest.mark.sanity
-    @pytest.mark.regression
     def test_login(self, setup):
         self.testlog.info("**** Verifying login test ****")
         self.driver = setup

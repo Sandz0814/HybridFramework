@@ -19,7 +19,7 @@ class Test_addCustomer:
     password = ReadConfig.getPassword()
     testlog = LogGen.loggen()
 
-    @pytest.mark.sanity
+    @pytest.mark.regression
     def test_addCustomer(self, setup):
 
         self.testlog.info("**** Verifying login test ****")
